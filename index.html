@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: edit the title/description as you like -->
+  <title>Dwasini S. | ECE Student &amp; Aspiring Software Developer</title>
+  <meta name="description" content="Portfolio of Dwasini S., a second-year Electronics and Communication Engineering student passionate about software development, problem-solving and building practical technology." />
+  <meta name="theme-color" content="#b9a4f0" />
+  <meta property="og:title" content="Dwasini S. | Portfolio" />
+  <meta property="og:description" content="ECE student, aspiring software developer and future IT professional." />
+  <meta property="og:type" content="website" />
+
+  <!-- Inline SVG favicon (no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='28' fill='%23b9a4f0'/%3E%3Ctext x='50' y='66' font-size='52' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EDS%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Marks the page as JS-enabled so reveal animations never hide content without JS; also applies saved theme before paint (no flash) -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+  </script>
+</head>
+
+<body>
+  <!-- Loading animation -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <p>DS</p>
+  </div>
+
+  <!-- Scroll progress indicator -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- Animated background blobs -->
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">Dwasini<span>.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Activities</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Switch to dark mode" title="Toggle dark / light mode">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ================= HOME ================= -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Dwasini S.</h1>
+          <p class="headline">ECE Student | Aspiring Software Developer | Future IT Professional</p>
+          <p class="intro">
+            I'm passionate about programming, problem-solving and technology. I enjoy turning ideas into
+            practical solutions, and I'm working towards a career in the IT industry.
+          </p>
+
+          <div class="btn-row">
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+
+          <!-- TODO: replace "#" with your real profile URLs (e.g. https://github.com/your-username) -->
+          <div class="social-row">
+            <a href="#" class="social" data-placeholder="GitHub" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="#" class="social" data-placeholder="LinkedIn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <strong aria-hidden="true">in</strong>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile photo placeholder.
+             To use your photo: delete the <div class="photo-placeholder"> and add
+             <img src="assets/profile.jpg" alt="Portrait of Dwasini S." width="360" height="360" /> inside .photo-frame -->
+        <div class="hero-photo reveal">
+          <div class="photo-frame">
+            <div class="photo-placeholder" role="img" aria-label="Profile photo placeholder">
+              <span>DS</span>
+              <small>Add your photo</small>
+            </div>
+          </div>
+          <span class="chip chip-1">Java &middot; C &middot; Python</span>
+          <span class="chip chip-2">Web Dev</span>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section"><span></span></a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Get to know me</p>
+          <h2>About Me</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a second-year Electronics and Communication Engineering student with a growing interest in
+              software development and emerging technologies. I like understanding how things work, breaking
+              problems into smaller steps, and building practical solutions &mdash; from Arduino-based safety
+              systems to web-based concepts.
+            </p>
+            <p>
+              I enjoy learning new technologies and applying them to real problems. My goal is to grow into a
+              dependable software professional in the IT industry.
+            </p>
+          </div>
+
+          <ul class="trait-grid reveal">
+            <li class="card trait"><h3>Adaptability</h3><p>Comfortable picking up new tools and ideas quickly.</p></li>
+            <li class="card trait"><h3>Communication</h3><p>Clear in explaining ideas and listening to others.</p></li>
+            <li class="card trait"><h3>Teamwork</h3><p>Enjoy collaborating and sharing the work.</p></li>
+            <li class="card trait"><h3>Leadership</h3><p>Willing to take initiative and guide a team.</p></li>
+            <li class="card trait"><h3>Stress Management</h3><p>Stay calm and organised under deadlines.</p></li>
+            <li class="card trait"><h3>Responsibility</h3><p>Committed to following through on tasks.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section alt" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">What I work with</p>
+          <h2>Skills</h2>
+          <p class="section-sub">
+            Bars show my current learning progress, not mastery. Edit the <code>data-level</code> values and labels in
+            <code>index.html</code> to match your real proficiency.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+          <!-- Programming -->
+          <article class="card skill-card reveal">
+            <h3>Programming</h3>
+            <div class="skill">
+              <div class="skill-top"><span>Java</span><em>Intermediate</em></div>
+              <div class="bar" role="progressbar" aria-label="Java proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span data-level="60"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>C</span><em>Intermediate</em></div>
+              <div class="bar" role="progressbar" aria-label="C proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><span data-level="65"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>Python</span><em>Beginner+</em></div>
+              <div class="bar" role="progressbar" aria-label="Python proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span data-level="50"></span></div>
+            </div>
+          </article>
+
+          <!-- Web development -->
+          <article class="card skill-card reveal">
+            <h3>Web Development</h3>
+            <div class="skill">
+              <div class="skill-top"><span>HTML</span><em>Comfortable</em></div>
+              <div class="bar" role="progressbar" aria-label="HTML proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"><span data-level="75"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>CSS</span><em>Intermediate</em></div>
+              <div class="bar" role="progressbar" aria-label="CSS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><span data-level="65"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>JavaScript</span><em>Beginner+</em></div>
+              <div class="bar" role="progressbar" aria-label="JavaScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span data-level="50"></span></div>
+            </div>
+          </article>
+
+          <!-- Tools -->
+          <article class="card skill-card reveal">
+            <h3>Tools</h3>
+            <div class="skill">
+              <div class="skill-top"><span>VS Code</span><em>Comfortable</em></div>
+              <div class="bar" role="progressbar" aria-label="VS Code proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"><span data-level="75"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>Git</span><em>Beginner+</em></div>
+              <div class="bar" role="progressbar" aria-label="Git proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span data-level="50"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span>GitHub</span><em>Beginner+</em></div>
+              <div class="bar" role="progressbar" aria-label="GitHub proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span data-level="50"></span></div>
+            </div>
+          </article>
+
+          <!-- Soft skills -->
+          <article class="card skill-card reveal">
+            <h3>Soft Skills</h3>
+            <ul class="tag-list big">
+              <li>Communication</li>
+              <li>Teamwork</li>
+              <li>Leadership</li>
+              <li>Adaptability</li>
+              <li>Problem-Solving</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- ================= CURRENTLY LEARNING ================= -->
+        <div class="learning reveal" id="learning">
+          <h3>Currently Learning</h3>
+          <!-- Edit this list to match what you're really learning right now -->
+          <ul class="tag-list big">
+            <li>Data Structures &amp; Algorithms</li>
+            <li>Advanced JavaScript</li>
+            <li>Git &amp; GitHub workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Things I've built &amp; designed</p>
+          <h2>Projects</h2>
+          <p class="section-sub">
+            Replace each <code>href="#"</code> with a real link once it exists. Buttons with <code>#</code> will show a reminder instead of opening a fake page.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <article class="card project reveal">
+            <div class="project-banner b1"><span>Software</span></div>
+            <div class="project-body">
+              <h3>Area-Specific Thermal Comfort Shelter Design</h3>
+              <p>A software-based system that recommends suitable shelter designs and materials based on local environmental conditions.</p>
+              <ul class="tag-list"><li>Software</li><li>Sustainability</li><li>Design</li></ul>
+              <div class="btn-row">
+                <a href="#" class="btn btn-primary btn-sm" data-placeholder="View Project (Thermal Comfort Shelter)">View Project</a>
+                <a href="#" class="btn btn-outline btn-sm" data-placeholder="Source Code (Thermal Comfort Shelter)">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="project-banner b2"><span>Web Concept</span></div>
+            <div class="project-body">
+              <h3>Hospital Pulse</h3>
+              <p>A hospital digital twin website concept for monitoring room availability, doctor specialties, and hospital resources.</p>
+              <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Digital Twin</li></ul>
+              <div class="btn-row">
+                <a href="#" class="btn btn-primary btn-sm" data-placeholder="View Project (Hospital Pulse)">View Project</a>
+                <a href="#" class="btn btn-outline btn-sm" data-placeholder="Source Code (Hospital Pulse)">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="project-banner b3"><span>Embedded</span></div>
+            <div class="project-body">
+              <h3>Smart Blind Spot Detection &amp; Collision Warning System</h3>
+              <p>An Arduino-based vehicle safety project using ultrasonic sensors and visual, audio, and vibration alerts.</p>
+              <ul class="tag-list"><li>Arduino</li><li>Ultrasonic Sensors</li><li>Embedded C</li></ul>
+              <div class="btn-row">
+                <a href="#" class="btn btn-primary btn-sm" data-placeholder="View Project (Blind Spot Detection)">View Project</a>
+                <a href="#" class="btn btn-outline btn-sm" data-placeholder="Source Code (Blind Spot Detection)">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <div class="project-banner b4"><span>Concept</span></div>
+            <div class="project-body">
+              <h3>Human Presence Detection Without False Alerts</h3>
+              <p>A system concept that uses sensors and a time-based mechanism to reduce false alarms.</p>
+              <ul class="tag-list"><li>Sensors</li><li>Timing Logic</li><li>System Design</li></ul>
+              <div class="btn-row">
+                <a href="#" class="btn btn-primary btn-sm" data-placeholder="View Project (Presence Detection)">View Project</a>
+                <a href="#" class="btn btn-outline btn-sm" data-placeholder="Source Code (Presence Detection)">Source Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section alt" id="education">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Where I'm learning</p>
+          <h2>Education</h2>
+        </header>
+
+        <div class="card edu reveal">
+          <div class="edu-main">
+            <h3>Bachelor of Engineering (B.E.)</h3>
+            <p class="edu-dept">Electronics and Communication Engineering (ECE)</p>
+            <dl class="edu-list">
+              <div><dt>Year</dt><dd>Second Year</dd></div>
+              <!-- TODO: fill these in -->
+              <div><dt>College</dt><dd class="placeholder">[Enter Your College Name]</dd></div>
+              <div><dt>Expected Graduation</dt><dd class="placeholder">[Enter Graduation Year]</dd></div>
+              <div><dt>CGPA / Academic Highlights</dt><dd class="placeholder">[Add your academic achievements]</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Beyond the classroom</p>
+          <h2>Achievements &amp; Activities</h2>
+          <p class="section-sub">Dashed cards are placeholders. Replace them with your real entries only.</p>
+        </header>
+
+        <div class="ach-grid">
+          <article class="card ach reveal">
+            <h3>Technical Projects &amp; Hackathons</h3>
+            <p class="placeholder">[Add hackathons or technical competitions you took part in]</p>
+          </article>
+          <article class="card ach reveal">
+            <h3>College Events &amp; Volunteering</h3>
+            <p class="placeholder">[Add events you organised or volunteered for]</p>
+          </article>
+          <article class="card ach reveal">
+            <h3>Workshops, Certifications &amp; Presentations</h3>
+            <p class="placeholder">[Add workshops attended, certificates earned, or technical presentations given]</p>
+          </article>
+          <article class="card ach reveal">
+            <h3>Awards &amp; Achievements</h3>
+            <p class="placeholder">[Add awards or recognitions]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESUME ================= -->
+    <section class="section alt" id="resume">
+      <div class="container">
+        <div class="card resume reveal">
+          <div>
+            <p class="eyebrow">Recruiters, this one's for you</p>
+            <h2>Resume</h2>
+            <p>
+              A concise overview of my education, skills, projects and activities. Place your PDF in the same
+              folder as <code>index.html</code> and name it <code>resume.pdf</code> (or change the links below).
+            </p>
+          </div>
+          <div class="btn-row">
+            <a href="resume.pdf" class="btn btn-primary" download="Dwasini_S_Resume.pdf">Download Resume</a>
+            <a href="resume.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Let's connect</p>
+          <h2>Contact</h2>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p>I'm open to internships, collaborations and learning opportunities. Reach out any time.</p>
+            <ul class="contact-list">
+              <!-- TODO: replace with your real email and profile URLs -->
+              <li>
+                <span class="label">Email</span>
+                <a href="mailto:your.email@example.com" id="emailLink">your.email@example.com</a>
+              </li>
+              <li>
+                <span class="label">LinkedIn</span>
+                <a href="#" data-placeholder="LinkedIn" target="_blank" rel="noopener noreferrer">Add your LinkedIn URL</a>
+              </li>
+              <li>
+                <span class="label">GitHub</span>
+                <a href="#" data-placeholder="GitHub" target="_blank" rel="noopener noreferrer">Add your GitHub URL</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="card contact-form reveal" id="contactForm" novalidate>
+            <p class="demo-note" role="note">
+              <strong>Demo form:</strong> no backend is connected, so messages are validated here but
+              <u>not sent</u>. Use the email above, or connect a service (see <code>script.js</code>).
+            </p>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+              <small class="error" id="nameError" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <small class="error" id="emailError" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+              <small class="error" id="subjectError" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <small class="error" id="messageError" aria-live="polite"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Designed and Built by Dwasini S.</p>
+      <p class="footer-small">Made with HTML, CSS &amp; JavaScript &middot; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- Toast for placeholder links -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top" title="Back to top">&uarr;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
